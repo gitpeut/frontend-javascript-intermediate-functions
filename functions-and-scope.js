@@ -109,12 +109,13 @@ function averageGrade3( grades ){
     for (; count < grades.length; count++) {
         total += grades[ count];
     }
-    return roundToTwo(total/count);
+    //return roundToTwo(total/count);
+    return Number.parseFloat( roundToTwo(total/count ) ).toFixed(2);
 }
 
-console.log( 'Average grade is ' + averageGrade3( grades) );
-console.log( 'Average grade [6, 4, 5] is ' + averageGrade3( [6, 4, 5]) );
-console.log( 'Average grade [8, 9, 4, 6, 10] is ' + averageGrade3( [8, 9, 4, 6, 10] ) );
+console.log( 'Average grade (2 decimals) is ' + averageGrade3( grades) );
+console.log( 'Average grade (2 decimals) [6, 4, 5] is ' + averageGrade3( [6, 4, 5]) );
+console.log( 'Average grade (2 decimals) [8, 9, 4, 6, 10] is ' + averageGrade3( [8, 9, 4, 6, 10] ) );
 
 
 
