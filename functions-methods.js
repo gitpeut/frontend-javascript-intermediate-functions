@@ -80,7 +80,7 @@ console.log( typeOfEmail("a.wiersma@outlook.com") );
 function checkEmailValidity( emailaddress ){
     //console.log( 'email address ' + emailaddress );
 
-    if ( emailaddress.split('@')[0] === emailaddress ){
+    if ( !emailaddress.includes('@') ){
        //console.log( 'Invalid, no @');
         return( false );
     }

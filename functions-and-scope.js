@@ -63,12 +63,11 @@ function cumLaude( grades){
 
 // ---- Verwachte uitkomst: 6.642857142857143
 function averageGrade1(){
-    let count = 0;
     let total = 0;
-    for (; count < grades.length; count++) {
-        total += grades[ count];
-    }
-    return (total/count);
+        for (let i = 0; i < grades.length; i++) {
+            total += grades[ i];
+        }
+    return (total/ grades.length );
 }
 
 console.log( 'Average grade is ' + averageGrade1() );
@@ -132,7 +131,7 @@ console.log( 'Average grade (2 decimals) [8, 9, 4, 6, 10] is ' + averageGrade3( 
 // ---- Verwachte uitkomst: 9
 
 function highestGrade() {
-    let max = -1;
+    let max = grades[0];
 
     for (let i = 0; i < grades.length; i++) {
         if ( grades[i] > max )max = grades[i];
@@ -148,7 +147,7 @@ console.log( 'Highest grade '+ highestGrade() );
 // Log het antwoord in de terminal.
 
 function highestGrade2( grades ) {
-    let max = -1;
+    let max = grades[0];
 
     for (let i = 0; i < grades.length; i++) {
         if ( grades[i] > max )max = grades[i];
